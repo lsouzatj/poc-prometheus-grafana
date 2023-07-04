@@ -1,10 +1,9 @@
 package com.br.monitoring.observability.adapters.in.controller;
 
-import com.br.monitoring.observability.application.core.model.Customer;
-import com.br.monitoring.observability.application.ports.in.*;
 import com.br.monitoring.observability.adapters.in.controller.requestDTO.CustomerRequestDTO;
 import com.br.monitoring.observability.adapters.in.controller.responseDTO.CustomerResponseDTO;
-import com.br.tracing.application.ports.in.*;
+import com.br.monitoring.observability.application.core.model.Customer;
+import com.br.monitoring.observability.application.ports.in.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.BeanUtils;

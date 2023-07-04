@@ -32,8 +32,8 @@ services:
     depends_on:
       - zookeeper
   app:
-    hostname: poc-tracing
-    container_name: poc-tracing
+    hostname: monitoring-observability
+    container_name: monitoring-observability
     image: tracing:latest
     networks:
       - app-network
