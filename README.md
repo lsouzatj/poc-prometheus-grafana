@@ -103,35 +103,35 @@
 
 ### Executando a aplicação com maven
 - Na raiz do projeto execute o seguinte comando:
-  ```
+  ```shell
   ./mvnw clean package -DskipTests
   ```
 
 ### Gerando imagem docker
 - Na raiz do projeto execute o seguinte comando para criar a imagem docker da aplicação:
-  ```
+  ```shell
   docker build --tag monitoring-observability .
   ```  
 
 ### Executar docker-compose para subir aplicação com container docker
 - Dentro da pasta docker-compose, execute o seguinte comando para subir os containers:
-  ```
+  ```shell
   docker-compose up -d
   ```
 - Execute o seguinte comando para verificar os status do containers docker:
-  ```
+  ```shell
   docker-compose ps
   ```
 
 ### Validar acesso e funcionamento do Prometheus
 - Acesse o seguinte endereço para validar o funcionamento do Prometheus:
-  ```
+  ```shell
   http://localhost:9090/
   ```
 
 ### Validar acesso e funcionamento do Grafana
 - Acesse o seguinte endereço para validar o funcionamento do Grafana:
-  ```
+  ```shell
   http://localhost:3000/
   ```
 - usar as credenciais abaixo para acessar o Grafana:
@@ -145,7 +145,7 @@
 ### Method: POST
 - URL: http://localhost:8080/api/v1/customer/save/{zipCode}
   #### Payload Request:
-  ```
+  ```json
   {
   "name": "Teste-01",
   "cpf": "001.002.003-04"
@@ -158,7 +158,7 @@
 ### Method: PUT
 - URL: http://localhost:8080/api/v1/customer/update/{id}
   #### Payload Request:
-  ```
+  ```json
   {
   "name": "Teste-02",
   "cpf": "001.002.003-04"
@@ -167,6 +167,7 @@
 ### Method: DELETE
 - URL: http://localhost:8080/api/v1/customer/delete/{id}
 
+#
 >## Configurar painel do Prometheus e Grafana
 Acessar tela do Prometheus e verificar se a aplicação está sendo monitorada:
 
@@ -174,7 +175,7 @@ Acessar tela do Prometheus e verificar se a aplicação está sendo monitorada:
 
 ![Texto image](img/graph.png)
 
-Acessar tela do Grafana e verificar se a aplicação está sendo monitorada:
+Acessar tela do Grafana realizar as configurações para iniciar o monitoramento da aplicação:
 - Adminstração:
   ![Texto image](img/adminstration.png)
 - Datasource:
