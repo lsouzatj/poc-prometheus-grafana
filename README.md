@@ -243,7 +243,7 @@ Acessar tela do Grafana realizar as configurações para iniciar o monitoramento
     - targets: ['host.docker.internal:8080'] # host.docker.internal pega o ip da máquina host
   ```
 
--Adicionar configurações no application.properties:
+- Adicionar configurações no application.properties:
   ```yml
   management:
     endpoints:
@@ -263,6 +263,7 @@ Acessar tela do Grafana realizar as configurações para iniciar o monitoramento
     ports:
       - 3000:3000
   ```
+#
 >## Desenvolvedores
 
 **Leandro D'Souza**
