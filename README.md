@@ -139,8 +139,6 @@
   user: admin
   password: admin
   ```
-- Adicionar o datasource do Prometheus no Grafana:
-  ```
 
 ### Method: POST
 - URL: http://localhost:8080/api/v1/customer/save/{zipCode}
