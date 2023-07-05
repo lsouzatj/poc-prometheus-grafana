@@ -6,13 +6,13 @@ spring:
   # Producer properties kafka
 #  kafka:
 #    producer:
-#      bootstrap-servers: 127.0.0.1:9092
+#      bootstrap-servers: kafka:9092
 #      key-serializer: org.apache.kafka.common.serialization.StringSerializer
 #      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 #      group-id: group-customer
 #  # Consumer properties kafka
 #    consumer:
-#      bootstrap-servers: 127.0.0.1:9092
+#      bootstrap-servers: kafka:9092
 #      auto-offset-reset: earliest
 #      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 #      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer

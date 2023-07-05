@@ -54,11 +54,13 @@ services:
       - app-network
     ports:
       - 3000:3000
+    depends_on:
+      - prometheus
 
   app:
     hostname: monitoring-observability
     container_name: monitoring-observability
-    image: tracing:latest
+    image: monitoring-observability:latest
     networks:
       - app-network
     ports:
