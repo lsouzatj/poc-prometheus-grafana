@@ -47,6 +47,14 @@ services:
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
 
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    networks:
+      - app-network
+    ports:
+      - 3000:3000
+
   app:
     hostname: monitoring-observability
     container_name: monitoring-observability
