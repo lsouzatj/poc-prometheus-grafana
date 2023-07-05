@@ -30,3 +30,10 @@ topic:
 clients:
   address:
     url: https://viacep.com.br/ws
+
+# Configuração Prometheus
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health, prometheus, metrics

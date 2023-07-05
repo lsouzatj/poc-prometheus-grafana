@@ -1,8 +1,10 @@
 version: "3"
+
 networks:
   app-network:
     driver: bridge
     external: true
+
 services:
   zookeeper:
     hostname: zookeeper
@@ -14,6 +16,7 @@ services:
       - '2181:2181'
     environment:
       - ALLOW_ANONYMOUS_LOGIN=yes
+
   kafka:
     hostname: kafka
     container_name: kafka
@@ -31,6 +34,19 @@ services:
       - KAFKA_CFG_INTER_BROKER_LISTENER_NAME=CLIENT
     depends_on:
       - zookeeper
+
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    networks:
+      - app-network
+    ports:
+      - 9090:9090
+    volumes:
+      - ../prometheus.yml:/etc/prometheus/prometheus.yml # Raiz onde está o prometheus.yml
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+
   app:
     hostname: monitoring-observability
     container_name: monitoring-observability
