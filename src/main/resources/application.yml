@@ -1,7 +1,7 @@
 spring:
 
   application:
-    name:monitoring-observability
+    name: monitoring-observability
 
   # Producer properties kafka
 #  kafka:
